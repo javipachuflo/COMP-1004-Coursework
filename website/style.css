@@ -3,6 +3,10 @@ body {
     margin: 0;
     padding: 0;
     background-color: #fff7e6; /* Default light orange background */
+    display: flex;
+    flex-direction: column; /* website from top to bottom using flex */
+    min-height: 100vh;
+    margin: 0;
 }
 
 header {
@@ -11,9 +15,13 @@ header {
     padding: 1rem 0;
 }
 
+h2 {
+    text-transform: capitalize;
+}
+
 .header-container {
-    display: flex;
-    justify-content: space-between; /* Space out the logo, nav, and social media links */
+    display: flex; /* put things in a row rather than in multiple rows */
+    justify-content: space-around; /* Space out the logo, nav, and social media links */
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
@@ -28,7 +36,7 @@ nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex;
+    display: flex; /* put things in a row rather than in multiple rows */
 }
 
 nav ul li {
@@ -55,9 +63,9 @@ nav ul li a:hover {
 
 main {
     padding: 2rem;
+    flex: 1;
 }
 
-/* Add this CSS to style.css */
 main.overlay {
     background-color: rgba(255, 255, 255, 0.8); /* White with 80% opacity */
     padding: 20px;
@@ -66,21 +74,19 @@ main.overlay {
     margin: 20px; /* Add margin to create a gap from all sides */
 }
 
-/* Add this CSS to style.css */
 footer {
     background-color: rgba(255, 102, 0, 0.8); /* Dark orange footer with some transparency */
     color: #fff;
-    padding: 10px 20px; /* Adjust padding as needed */
-    position: fixed;
+    padding: 10px 0px; /* Footer padding / how big the footer is */
     width: 100%;
-    bottom: 0;
-    max-height: 50px; /* Set a maximum height */
+    text-align: center;
+    max-height: 50px; /* Max height so the footer isn't occupying too much */
     overflow: hidden; /* Ensure content doesn't overflow */
 }
 
 .footer-container {
-    display: flex;
-    justify-content: space-between; /* Space out the copyright text and social media links */
+    display: flex; /* put things in a row rather than in multiple rows */
+    justify-content: space-around; /* space out things in footer */
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
@@ -118,7 +124,6 @@ footer {
     background-repeat: no-repeat; /* Prevent the background from repeating */
 }
 
-/* Add this CSS to style.css */
 .games-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -219,4 +224,3 @@ footer {
     font-size: 1rem;
     color: #555;
 }
-
