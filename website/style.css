@@ -74,6 +74,8 @@ main.overlay {
     margin: 20px; /* Add margin to create a gap from all sides */
 }
 
+
+
 footer {
     background-color: rgba(255, 102, 0, 0.8); /* Dark orange footer with some transparency */
     color: #fff;
@@ -108,7 +110,7 @@ footer {
 }
 
 .home-background {
-    background-image: url('Moving_Rectangle_Pattern_5.gif'); /* Home page background */
+    background-image: url('imgs/Moving_Rectangle_Pattern_5.gif'); /* Home page background */
     background-size: cover; /* Ensure the background covers the entire area */
     background-position: center top; /* Align the top of the image with the top of the element and center it horizontally */
     background-attachment: fixed; /* Fixed background image */
@@ -118,7 +120,7 @@ footer {
 
 
 .games-background {
-    background-image: url('Moving_Rectangle_Pattern_5.gif'); /* Contact page background */
+    background-image: url('imgs/Moving_Rectangle_Pattern_5.gif'); /* Contact page background */
     background-size: cover; /* Ensure the background covers the entire area */
     background-position: center top; /* Align the top of the image with the top of the element and center it horizontally */
     background-repeat: no-repeat; /* Prevent the background from repeating */
@@ -144,6 +146,7 @@ footer {
 .game-card img {
     width: 100%;
     height: auto;
+    max-height: 112px;
 }
 
 .popup {
@@ -160,13 +163,142 @@ footer {
 
 .popup-content {
     background-color: #fff;
-    margin: 15% auto;
+    margin: 5% auto;
     padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 600px;
+    border: 25px solid rgb(255, 102, 0);
+    width: 85%;
+    max-width: 1000px;
     border-radius: 10px;
     position: relative;
+    background-image: url('imgs/Moving_Rectangle_Pattern_5.gif');
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
+.popup-content img {
+    width: 100%;
+    height: auto;
+}
+
+div#popup-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.popup-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.video-and-buttons-container {
+    display: flex; /* Align video and buttons side by side */
+    justify-content: flex-start; /* Add space between video and buttons */
+    align-items: center; /* Vertically align video and buttons */
+    flex-wrap: wrap; /* Allow elements to wrap on smaller screens */
+    gap: 20px; /* Add spacing between video and buttons */
+    width: 100%; /* Use the full width of the parent container */
+    max-width: 1200px; /* Limit the container width */
+    margin: 0 auto; /* Center the container */
+}
+
+.video-and-buttons-container iframe {
+    width: 640px; /* Set the width of the video */
+    height: 360px; /* Set the height of the video */
+    margin: 10px; /* Add some margin around the video */
+    flex-shrink: 0; /* Prevent the video from shrinking */
+}
+
+.video-and-buttons-container a {
+    margin: 10px;
+}
+
+.video-and-buttons-container img {
+    height: 30px; /* Set the height of the social media icons */
+    width: auto;  /* Maintain aspect ratio */
+}
+
+.video-container {
+    position: relative;
+    flex: 1; /* Allow the video to take available space */
+    min-width: 300px; /* Set a minimum width for the video */
+    max-width: 60%; /* Constrain the maximum width of the video */
+    aspect-ratio: 16 / 9; /* Maintain the 16:9 aspect ratio */
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center; /* Center buttons vertically */
+    align-items: center; /* Center buttons horizontally */
+    gap: 10px; /* Add spacing between buttons */
+    flex: 0 1 200px; /* Allow the buttons container to shrink but ensure a minimum width */
+    text-align: center;
+}
+
+.buttons-container img {
+    width: 80px; /* Set a default width for button images */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease; /* Add a hover effect */
+}
+
+.buttons-container img:hover {
+    transform: scale(1.1); /* Slightly enlarge the button on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .video-and-buttons-container {
+        flex-direction: column; /* Stack video and buttons vertically */
+        text-align: center; /* Center align content */
+        gap: 20px; /* Maintain spacing between video and buttons */
+    }
+
+    .video-container {
+        max-width: 100%; /* Allow the video to take full width on smaller screens */
+        height: auto;
+    }
+
+    .buttons-container {
+        width: 100%; /* Ensure buttons container takes full width */
+    }
+
+    .buttons-container img {
+        width: 60px; /* Adjust button size for smaller screens */
+    }
+}
+
+.description-container {
+    width: 100%;
+    text-align: left; /* Align text to the left */
+    margin: 10px 0; /* Add some margin around the description */
+}
+
+.description-container p {
+    font-size: 16px; /* Set the font size */
+    color: #333; 
+    margin: 10px; /* Add some margin around the text */
+    width: 35%; /* Set the width of the text */
+    text-align: left; /* Align the text to the left */
+}
+
+.image-container {
+    width: 100%;
+    max-width: 600px;
+    border: #333;
+    text-align: center;
 }
 
 .close {
@@ -186,7 +318,7 @@ footer {
 
 
 .about-background {
-    background-image: url('Moving_Rectangle_Pattern_5.gif'); /* About page background */
+    background-image: url('imgs/Moving_Rectangle_Pattern_5.gif'); /* About page background */
     background-size: cover; /* Ensure the background covers the entire area */
     background-position: center top; /* Align the top of the image with the top of the element and center it horizontally */
     background-repeat: no-repeat; /* Prevent the background from repeating */
@@ -195,7 +327,7 @@ footer {
 
 
 .contact-background {
-    background-image: url('Moving_Rectangle_Pattern_5.gif'); /* Contact page background */
+    background-image: url('imgs/Moving_Rectangle_Pattern_5.gif'); /* Contact page background */
     background-size: cover; /* Ensure the background covers the entire area */
     background-position: center top; /* Align the top of the image with the top of the element and center it horizontally */
     background-repeat: no-repeat; /* Prevent the background from repeating */
