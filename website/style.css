@@ -21,7 +21,7 @@ h2 {
 
 .header-container {
     display: flex; /* put things in a row rather than in multiple rows */
-    justify-content: space-around; /* Space out the logo, nav, and social media links */
+    justify-content: space-between; /* Space out the logo, nav, and social media links */
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
@@ -30,6 +30,7 @@ h2 {
 
 .logo img {
     height: 50px; /* Set the height of the logo */
+    margin-right: auto;
 }
 
 nav ul {
@@ -147,6 +148,7 @@ footer {
     width: 100%;
     height: auto;
     max-height: 112px;
+    box-shadow: 0px 8px 20px 5px rgba(0, 0, 0, 0.1);
 }
 
 .popup {
@@ -197,7 +199,7 @@ div#popup-info {
 .video-and-buttons-container {
     display: flex; /* Align video and buttons side by side */
     justify-content: flex-start; /* Add space between video and buttons */
-    align-items: center; /* Vertically align video and buttons */
+    align-items: flex-start; /* to have */
     flex-wrap: wrap; /* Allow elements to wrap on smaller screens */
     gap: 20px; /* Add spacing between video and buttons */
     width: 100%; /* Use the full width of the parent container */
@@ -242,10 +244,11 @@ div#popup-info {
 .buttons-container {
     display: flex;
     justify-content: center; /* Center buttons vertically */
-    align-items: center; /* Center buttons horizontally */
+    align-items: flex-start; /* buttons and text start on the left, like normal text */
     gap: 10px; /* Add spacing between buttons */
-    flex: 0 1 200px; /* Allow the buttons container to shrink but ensure a minimum width */
+    flex: 0 1 350px; /* Allow the buttons container to shrink but ensure a minimum width */
     text-align: center;
+    flex-direction: column; /* Stack buttons vertically */
 }
 
 .buttons-container img {

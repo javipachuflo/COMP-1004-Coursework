@@ -69,16 +69,15 @@ function showPopup(gameId, title, imageSrc, videoUrl, description, game_link) {
                     <iframe src="${videoUrl}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"></iframe>
                 </div>
 
+                
                 <div class="buttons-container">
+                    <p>${description}</p>
+
                     <a href="${game_link}" target="_blank">
-                        <img src="imgs/Steam.png" alt="Steam">
+                        <img src="imgs/steam_brandAssets_dark.png" alt="Steam">
                     </a>
                 </div>
 
-            </div>
-
-            <div class="description-container">
-                <p>${description}</p>
             </div>
         </div>
     `;
